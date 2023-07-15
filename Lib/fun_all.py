@@ -11,6 +11,7 @@ class fun_all:
         main_path='G:/Code/get_domain/config.json'
         with open(main_path,'r') as load_f:
             self.load_dict = json.load(load_f)
+        #上面三行代码的作用是从 G:/Code/get_domain/config.json 这个路径所指向的json文件中加载数据，然后把这些数据作为一个字典赋值给 self.load_dict。
         with open(self.load_dict['target_json'],'r') as load_f:
             self.domain_dict = json.load(load_f)
         self.domain=self.domain_dict['domain']
